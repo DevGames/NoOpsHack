@@ -18,7 +18,8 @@ class NoOpsHack extends \pocketmine\plugin\PluginBase implements \pocketmine\eve
     }
 
 
-    public function onJoin(pocketmine\event\player\PlayerJoinEvent $ev){
+    public function onJoin(\pocketmine\event\player\PlayerJoinEvent 
+                           $ev){
         foreach ($this->config->get("opsname") as $d){
             
         if($ev->getPlayer()->getName() == $d){
